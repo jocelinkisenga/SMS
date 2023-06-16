@@ -31,16 +31,16 @@ class HomeService
         return $this->countMyCategoriesAction->handle();
     }
 
-    public function CountMyOrders(CountMyOrdersAction $order)
+    public function CountMyOrders()
     {
-        return $order;
+
     }
 
     public function getRecentProduct(){
-        return $products;
+
     }
 
-    public function getRecentOrders(getMyRecentOrdersAction $orders){
-        return $orders;
+    public function getRecentOrders(){
+
     }
 }
