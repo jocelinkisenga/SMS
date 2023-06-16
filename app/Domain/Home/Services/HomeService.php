@@ -2,28 +2,45 @@
 
 namespace App\Domain\Home\Services;
 
+use App\Domain\Home\Actions\CountMyCategoriesAction;
+use App\Domain\Home\Actions\CountMyOrdersAction;
+use App\Domain\Home\Actions\CountMyProductAction;
+use App\Domain\Home\Actions\getMyRecentOrdersAction;
+use App\Domain\Home\Actions\getMyRecentProductsAction;
+
 class HomeService
 {
-    public function countMyProducts(Type $var = null)
-    {
+    public function __construct(
 
-    }
-
-    public function CountMyCategories(Type $var = null)
+      public  CountMyProductAction $countMyProductAction,
+      public getMyRecentProductsAction $getMyRecentProductsAction,
+      public getMyRecentOrdersAction $getMyRecentOrdersAction,
+      public CountMyOrdersAction $countMyOrdersAction,
+      public CountMyCategoriesAction $countMyCategoriesAction
+    )
     {
         # code...
     }
-
-    public function CountMyOrders(Type $var = null)
+    public function countMyProducts()
     {
+        return $this->countMyProductAction->handle();
+    }
 
+    public function CountMyCategories()
+    {
+        return $this->countMyCategoriesAction->handle();
+    }
+
+    public function CountMyOrders(CountMyOrdersAction $order)
+    {
+        return $order;
     }
 
     public function getRecentProduct(){
-
+        return $products;
     }
 
-    public function getRecentOrders(){
-        
+    public function getRecentOrders(getMyRecentOrdersAction $orders){
+        return $orders;
     }
 }

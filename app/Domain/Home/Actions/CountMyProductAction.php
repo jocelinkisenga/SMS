@@ -4,8 +4,8 @@ namespace App\Domain\Home\Actions;
 
 class CountMyProductAction
 {
-    public static function handle():void
+    public static function handle():array
     {
-        //TODO: handle CountMyProductAction action
+        return ["id"];
     }
 }
