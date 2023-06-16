@@ -8,6 +8,6 @@ class CountMyOrdersAction
 {
     public static function handle():void
     {
-        return Order::UserId(Auth::user()->id)->count();
+        // return Order::UserId(Auth::user()->id)->count();
     }
 }

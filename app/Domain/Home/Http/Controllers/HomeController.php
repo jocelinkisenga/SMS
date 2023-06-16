@@ -8,8 +8,12 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index(HomeService $homeService)
+    public function __construct(public HomeService $homeService){
+
+    }
+
+    public function index()
     {
-        dd($homeService->countMyProducts());
+        dd($this->homeService->countMyProducts());
     }
 }
