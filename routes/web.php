@@ -1,6 +1,7 @@
 <?php
 
 use App\Domain\Home\Http\Controllers\HomeController;
+use App\Domain\User\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[HomeController::class,'index'])->name('home');
+
+require_once __DIR__.'/../routes/auth.php';
