@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[HomeController::class,'index'])->name('home');
-
+Route::middleware('auth')->group(function(){
+    Route::get('/',[HomeController::class,'index'])->name('home');
+});
+require_once __DIR__.'/../routes/categorie.php';
 require_once __DIR__.'/../routes/auth.php';

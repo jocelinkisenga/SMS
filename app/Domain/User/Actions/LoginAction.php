@@ -1,11 +1,12 @@
 <?php
 
 namespace App\Domain\User\Actions;
+use App\Domain\User\Models\User;
 
 class LoginAction
 {
-    public static function handle():void
+    public static function handle($email) : bool
     {
-        //TODO: handle LoginAction action
+        return (User::whereEmail($email)->first()) ? true : false;
     }
 }

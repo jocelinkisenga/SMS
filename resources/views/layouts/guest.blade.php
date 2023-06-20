@@ -22,7 +22,7 @@
 
       <div class="wrapper">
 
-        @include("includes.navbar")
+
 
 @yield('content')
 

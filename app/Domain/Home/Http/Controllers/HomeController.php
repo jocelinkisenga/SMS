@@ -14,6 +14,6 @@ class HomeController extends Controller
 
     public function index()
     {
-        dd($this->homeService->countMyProducts());
+       return view("home.index");
     }
 }
