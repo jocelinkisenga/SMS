@@ -1,17 +1,15 @@
 @extends("layouts.app")
 @section("title",'products list')
 @section("content")
-      
+
 <div class="content-page">
     <div class="container-fluid">
        <div class="row">
            <div class="col-lg-12">
                <div class="d-flex flex-wrap flex-wrap align-items-center justify-content-between mb-4">
                    <div>
-                       <h4 class="mb-3">Product List</h4>
-                       <p class="mb-0">The product list effectively dictates product presentation and provides space<br> to list your products and offering in the most appealing way.</p>
-                   </div>
-                   <a href="page-add-product.html" class="btn btn-primary add-list"><i class="las la-plus mr-3"></i>Add Product</a>
+                       <h4 class="mb-3">Product List</h4>   </div>
+                   <a href="{{route('product.create')}}" class="btn btn-primary add-list"><i class="las la-plus mr-3"></i>Add Product</a>
                </div>
            </div>
            <div class="col-lg-12">
@@ -78,7 +76,7 @@
                            </td>
                            <td>
                                <div class="d-flex align-items-center">
-                                   <img src="../assets/images/table/product/02.jpg" class="img-fluid rounded avatar-50 mr-3" alt="image">                                    
+                                   <img src="../assets/images/table/product/02.jpg" class="img-fluid rounded avatar-50 mr-3" alt="image">
                                    <div>
                                        Rain Umbrella
                                        <p class="mb-0"><small>This is test Product</small></p>
@@ -111,7 +109,7 @@
                            </td>
                            <td>
                                <div class="d-flex align-items-center">
-                                   <img src="../assets/images/table/product/03.jpg" class="img-fluid rounded avatar-50 mr-3" alt="image">                                    
+                                   <img src="../assets/images/table/product/03.jpg" class="img-fluid rounded avatar-50 mr-3" alt="image">
                                    <div>
                                        Serum Bottle
                                        <p class="mb-0"><small>This is test Product</small></p>
@@ -144,7 +142,7 @@
                            </td>
                            <td>
                                <div class="d-flex align-items-center">
-                                   <img src="../assets/images/table/product/04.jpg" class="img-fluid rounded avatar-50 mr-3" alt="image">                                    
+                                   <img src="../assets/images/table/product/04.jpg" class="img-fluid rounded avatar-50 mr-3" alt="image">
                                    <div>
                                        Coffee Beans
                                        <p class="mb-0"><small>This is test Product</small></p>
@@ -179,7 +177,7 @@
                                <div class="d-flex align-items-center">
                                    <img src="../assets/images/table/product/05.jpg" class="img-fluid rounded avatar-50 mr-3" alt="image">
                                    <div>
-                                       Book Shelves                                   
+                                       Book Shelves
                                        <p class="mb-0"><small>This is test Product</small></p>
                                    </div>
                                </div>
@@ -212,7 +210,7 @@
                                <div class="d-flex align-items-center">
                                    <img src="../assets/images/table/product/06.jpg" class="img-fluid rounded avatar-50 mr-3" alt="image">
                                    <div>
-                                       Dinner Set                                  
+                                       Dinner Set
                                        <p class="mb-0"><small>This is test Product</small></p>
                                    </div>
                                </div>
@@ -245,7 +243,7 @@
                                <div class="d-flex align-items-center">
                                    <img src="../assets/images/table/product/07.jpg" class="img-fluid rounded avatar-50 mr-3" alt="image">
                                    <div>
-                                       Nike Shoes                               
+                                       Nike Shoes
                                        <p class="mb-0"><small>This is test Product</small></p>
                                    </div>
                                </div>
@@ -278,7 +276,7 @@
                                <div class="d-flex align-items-center">
                                    <img src="../assets/images/table/product/08.jpg" class="img-fluid rounded avatar-50 mr-3" alt="image">
                                    <div>
-                                       Computer Glasses                               
+                                       Computer Glasses
                                        <p class="mb-0"><small>This is test Product</small></p>
                                    </div>
                                </div>
@@ -311,7 +309,7 @@
                                <div class="d-flex align-items-center">
                                    <img src="../assets/images/table/product/09.jpg" class="img-fluid rounded avatar-50 mr-3" alt="image">
                                    <div>
-                                       Alloy Jewel Set                   
+                                       Alloy Jewel Set
                                        <p class="mb-0"><small>This is test Product</small></p>
                                    </div>
                                </div>
@@ -346,14 +344,14 @@
            <div class="modal-content">
                <div class="modal-body">
                    <div class="popup text-left">
-                       <div class="media align-items-top justify-content-between">                            
+                       <div class="media align-items-top justify-content-between">
                            <h3 class="mb-3">Product</h3>
                            <div class="btn-cancel p-0" data-dismiss="modal"><i class="las la-times"></i></div>
                        </div>
                        <div class="content edit-notes">
                            <div class="card card-transparent card-block card-stretch event-note mb-0">
                                <div class="card-body px-0 bukmark">
-                                   <div class="d-flex align-items-center justify-content-between pb-2 mb-3 border-bottom">                                                    
+                                   <div class="d-flex align-items-center justify-content-between pb-2 mb-3 border-bottom">
                                        <div class="quill-tool">
                                        </div>
                                    </div>
