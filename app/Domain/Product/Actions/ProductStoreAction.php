@@ -2,10 +2,24 @@
 
 namespace App\Domain\Product\Actions;
 
+use App\Domain\Products\Models\Product;
+use Illuminate\Support\Facades\Auth;
+
 class ProductStoreAction
 {
-    public static function handle():void
+
+    public static function handle($request): int
     {
-        //TODO: handle ProductStoreAction action
+        $product = Product::create([
+            'user_id' => Auth::user()->id,
+            'category_id' => $request->category_id,
+            'name' => $request->name,
+            'code' => $request->code,
+            'price' => $request->price,
+            'quantity' => $request->quantity
+
+        ]);
+        return $product->id;
+
     }
 }

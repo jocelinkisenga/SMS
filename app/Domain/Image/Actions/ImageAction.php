@@ -4,8 +4,10 @@ namespace App\Domain\Image\Actions;
 
 class ImageAction
 {
-    public static function handle():void
+    public static function handle($image) : string
     {
-        //TODO: handle ImageAction action
+        $fileName= time().'.'.$image->file('image')->getClientOriginalName();
+        $path=$image->file('image')->storeAs('uploads', $fileName, 'public');
+        return $fileName;
     }
 }

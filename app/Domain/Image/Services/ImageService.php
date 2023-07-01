@@ -2,10 +2,23 @@
 
 namespace App\Domain\Image\Services;
 
+use App\Domain\Image\Actions\ImageAction;
+use App\Domain\Image\Actions\ImageSaveAction;
+
 class ImageService
 {
     public function __construct(
-        public string $service
+        public ImageAction $imageAction,
+        public ImageSaveAction $imageSaveAction,
     ) {
+    }
+
+    public function uploadOneImage($image) : string
+    {
+      return   $this->imageAction->handle($image);
+    }
+
+    public function imageSave($productId, $fileName){
+        $this->imageAction->handle($productId, $fileName);
     }
 }

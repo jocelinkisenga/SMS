@@ -13,7 +13,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <form action="{{route('product.store')}}" method="POST" enctype="multipart/form-data" data-toggle="validator">
+                            <form method="POST" action="{{route('product.store')}}"  enctype="multipart/form-data" data-toggle="validator">
                                 <div class="row">
                                     @csrf
                                     <div class="col-md-6">
@@ -38,7 +38,7 @@
                                             <select name="category_id" class="selectpicker form-control" data-style="py-0">
                                                 <option value="" selected>select a category</option>
                                                 @foreach ($categories as $category)
-                                                <option>{{$category->name}}</option>
+                                                <option value="{{$category->id}}">{{$category->name}}</option>
                                                 @endforeach
 
                                             </select>
