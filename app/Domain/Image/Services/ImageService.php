@@ -19,6 +19,6 @@ class ImageService
     }
 
     public function imageSave($productId, $fileName){
-        $this->imageAction->handle($productId, $fileName);
+        $this->imageSaveAction->handle($productId, $fileName);
     }
 }
