@@ -20,4 +20,5 @@ Route::middleware('auth')->group(function(){
 });
 require_once __DIR__.'/../routes/categorie.php';
 require_once __DIR__.'/../routes/product.php';
+require_once __DIR__.'/../routes/order.php';
 require_once __DIR__.'/../routes/auth.php';
