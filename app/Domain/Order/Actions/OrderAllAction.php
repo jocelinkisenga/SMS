@@ -6,8 +6,8 @@ use App\Domain\Order\Models\Order;
 
 class OrderAllAction
 {
-    public static function handle():void
+    public static function handle(): void
     {
-        return Order::latest()->where("user_id","=",Auth::user()->id)->get();
+        return Order::latest()->where('user_id', '=', Auth::user()->id)->get();
     }
 }

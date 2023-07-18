@@ -16,19 +16,22 @@ class OrderService
 
     /**
      * Summary of all
+     *
      * @return void
      */
-    public function all(){
+    public function all()
+    {
         return $this->orderAllAction->handle();
 
     }
 
-    public function one(int $orderId){
+    public function one(int $orderId)
+    {
         return $this->orderOneAction->handle($orderId);
     }
 
-    public function delete(){
+    public function delete()
+    {
 
     }
-
 }

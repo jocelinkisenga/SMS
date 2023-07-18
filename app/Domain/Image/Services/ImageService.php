@@ -13,12 +13,13 @@ class ImageService
     ) {
     }
 
-    public function uploadOneImage($image) : string
+    public function uploadOneImage($image): string
     {
-      return   $this->imageAction->handle($image);
+        return $this->imageAction->handle($image);
     }
 
-    public function imageSave($productId, $fileName){
+    public function imageSave($productId, $fileName)
+    {
         $this->imageSaveAction->handle($productId, $fileName);
     }
 }

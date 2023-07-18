@@ -14,31 +14,37 @@ class ProductService
         public ProductStoreAction $productStoreAction,
         public ImageService $imageService,
         public ProductGetAllAction $productGetAllAction,
-    ){
+    ) {
 
     }
-    public function all(){
+
+    public function all()
+    {
         return $this->productGetAllAction->handle();
     }
 
-    public function one(){
+    public function one()
+    {
 
     }
 
-    public function create($request){
-        if($request->hasFile('image')){
-            $this->newImageName = $this->imageService->uploadOneImage($request, );
+    public function create($request)
+    {
+        if ($request->hasFile('image')) {
+            $this->newImageName = $this->imageService->uploadOneImage($request);
         }
-       $productId = $this->productStoreAction->handle($request, );
-       $this->imageService->ImageSave($productId, $this->newImageName, );
+        $productId = $this->productStoreAction->handle($request);
+        $this->imageService->ImageSave($productId, $this->newImageName);
 
     }
 
-    public function delete(){
+    public function delete()
+    {
 
     }
 
-    public function update(){
+    public function update()
+    {
 
     }
 }

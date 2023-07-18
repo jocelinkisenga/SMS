@@ -10,7 +10,7 @@ class ImageSaveAction
     {
         Image::create([
             'product_id' => $productId,
-            'image' => $fileName
+            'image' => $fileName,
         ]);
     }
 }

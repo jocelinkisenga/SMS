@@ -9,6 +9,6 @@ class CategorieGetAllAction
 {
     public static function handle()
     {
-        return Category::where("user_id",Auth::user()->id)->get();
+        return Category::where('user_id', Auth::user()->id)->get();
     }
 }

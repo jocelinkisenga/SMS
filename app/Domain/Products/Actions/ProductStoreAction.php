@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Domain\Products\Actions;
+
 use App\Domain\Products\Models\Product;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,9 +15,10 @@ class ProductStoreAction
             'name' => $request->name,
             'code' => $request->code,
             'price' => $request->price,
-            'quantity' => $request->quantity
+            'quantity' => $request->quantity,
 
         ]);
+
         return $product->id;
     }
 }

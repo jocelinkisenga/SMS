@@ -9,6 +9,6 @@ class ProductGetAllAction
 {
     public static function handle()
     {
-        return Product::latest()->where('user_id',Auth::user()->id)->get();
+        return Product::latest()->where('user_id', Auth::user()->id)->get();
     }
 }

@@ -9,47 +9,49 @@ use App\Http\Controllers\Controller;
 
 class ProductController extends Controller
 {
-
     /**
      * Summary of __construct
-     * @param \App\Domain\Categories\Services\CategorieService $categorieService
-     * @param \App\Domain\Products\Services\ProductService $productService
      */
     public function __construct(
         public CategorieService $categorieService,
         public ProductService $productService
-    ) {}
+    ) {
+    }
 
     /**
      * Summary of index
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function index(){
-        return view("products.products", ['products' => $this->productService->all()]);
+    public function index()
+    {
+        return view('products.products', ['products' => $this->productService->all()]);
     }
-
 
     /**
      * Summary of create
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function create() {
+    public function create()
+    {
 
-       return  view("products.add", [
-        "categories" => $this->categorieService->all()
-       ]);
+        return view('products.add', [
+            'categories' => $this->categorieService->all(),
+        ]);
     }
 
     /**
      * Summary of store
-     * @param \App\Domain\Product\Http\Requests\ProductRequest $productRequest
+     *
      * @return void
      */
-    public function store(ProductRequest $productRequest,){
+    public function store(ProductRequest $productRequest)
+    {
 
         $this->productService->create($productRequest);
+
         return redirect()->route('product.index');
 
     }
-
 }

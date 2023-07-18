@@ -12,15 +12,15 @@ class HomeService
 {
     public function __construct(
 
-      public  CountMyProductAction $countMyProductAction,
-      public getMyRecentProductsAction $getMyRecentProductsAction,
-      public getMyRecentOrdersAction $getMyRecentOrdersAction,
-      public CountMyOrdersAction $countMyOrdersAction,
-      public CountMyCategoriesAction $countMyCategoriesAction
-    )
-    {
-        # code...
+        public CountMyProductAction $countMyProductAction,
+        public getMyRecentProductsAction $getMyRecentProductsAction,
+        public getMyRecentOrdersAction $getMyRecentOrdersAction,
+        public CountMyOrdersAction $countMyOrdersAction,
+        public CountMyCategoriesAction $countMyCategoriesAction
+    ) {
+        // code...
     }
+
     public function countMyProducts()
     {
         return $this->countMyProductAction->handle();
@@ -36,11 +36,13 @@ class HomeService
 
     }
 
-    public function getRecentProduct(){
+    public function getRecentProduct()
+    {
 
     }
 
-    public function getRecentOrders(){
+    public function getRecentOrders()
+    {
 
     }
 }
