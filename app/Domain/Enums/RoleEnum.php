@@ -2,7 +2,9 @@
 
 namespace App\Domain\Enums;
 
-enum RoleEnum{
+enum RoleEnum
+{
     const ADMIN = 1;
+
     const CLIENT = 2;
 }

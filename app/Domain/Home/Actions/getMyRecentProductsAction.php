@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 class getMyRecentProductsAction
 {
-    public static function handle():void
+    public static function handle(): void
     {
         // return Product::latest()->userId(Auth::user()->id)->limit(5)->get();
     }

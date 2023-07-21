@@ -1,7 +1,6 @@
 <?php
 
 use App\Domain\Home\Http\Controllers\HomeController;
-use App\Domain\User\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,8 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth')->group(function(){
-    Route::get('/',[HomeController::class,'index'])->name('home');
+Route::middleware('auth')->group(function () {
+    Route::get('/', [HomeController::class, 'index'])->name('home');
 });
 require_once __DIR__.'/../routes/categorie.php';
+require_once __DIR__.'/../routes/product.php';
+require_once __DIR__.'/../routes/order.php';
 require_once __DIR__.'/../routes/auth.php';
+require_once __DIR__.'/../routes/purchase.php';
+require_once __DIR__.'/../routes/customer.php';
+require_once __DIR__.'/../routes/supplier.php';

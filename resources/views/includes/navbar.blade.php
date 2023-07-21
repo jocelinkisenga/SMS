@@ -1,6 +1,6 @@
 <div class="iq-sidebar  sidebar-default ">
     <div class="iq-sidebar-logo d-flex align-items-center justify-content-between">
-        <a href="backend/index.html" class="header-logo">
+        <a href="{{route('home')}}" class="header-logo">
             <img src="assets/images/logo.png" class="img-fluid rounded-normal light-logo" alt="logo">
             <h5 class="logo-title light-logo ml-3">POSDash</h5>
         </a>
@@ -12,7 +12,7 @@
         <nav class="iq-sidebar-menu">
             <ul id="iq-sidebar-toggle" class="iq-menu">
                 <li class="active">
-                    <a href="backend/index.html" class="svg-icon">
+                    <a href="{{route('home')}}" class="svg-icon">
                         <svg class="svg-icon" id="p-dash1" width="20" height="20"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -44,12 +44,12 @@
                     </a>
                     <ul id="product" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                         <li class="">
-                            <a href="backend/page-list-product.html">
+                            <a href="{{route('product.index')}}">
                                 <i class="las la-minus"></i><span>List Product</span>
                             </a>
                         </li>
                         <li class="">
-                            <a href="backend/page-add-product.html">
+                            <a href="{{route('product.create')}}">
                                 <i class="las la-minus"></i><span>Add Product</span>
                             </a>
                         </li>
@@ -133,12 +133,12 @@
                     </a>
                     <ul id="purchase" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                         <li class="">
-                            <a href="backend/page-list-purchase.html">
+                            <a href="{{route("purchases.index")}}">
                                 <i class="las la-minus"></i><span>List Purchases</span>
                             </a>
                         </li>
                         <li class="">
-                            <a href="backend/page-add-purchase.html">
+                            <a href="{{route("purchase.create")}}">
                                 <i class="las la-minus"></i><span>Add purchase</span>
                             </a>
                         </li>

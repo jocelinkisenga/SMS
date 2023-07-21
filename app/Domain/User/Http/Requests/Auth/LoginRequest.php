@@ -2,8 +2,8 @@
 
 namespace App\Domain\User\Http\Requests\Auth;
 
-use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Auth\Events\Lockout;
+use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Str;
@@ -27,13 +27,12 @@ class LoginRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'email' => "required|email",
-            'password' => "required"
+            'email' => 'required|email',
+            'password' => 'required',
         ];
     }
 
-
-        /**
+    /**
      * Attempt to authenticate the request's credentials.
      *
      * @return void
