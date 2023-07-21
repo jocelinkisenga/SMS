@@ -21,3 +21,6 @@ require_once __DIR__.'/../routes/categorie.php';
 require_once __DIR__.'/../routes/product.php';
 require_once __DIR__.'/../routes/order.php';
 require_once __DIR__.'/../routes/auth.php';
+require_once __DIR__.'/../routes/purchase.php';
+require_once __DIR__.'/../routes/customer.php';
+require_once __DIR__.'/../routes/supplier.php';

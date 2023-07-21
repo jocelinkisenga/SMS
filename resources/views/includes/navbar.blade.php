@@ -133,12 +133,12 @@
                     </a>
                     <ul id="purchase" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                         <li class="">
-                            <a href="backend/page-list-purchase.html">
+                            <a href="{{route("purchases.index")}}">
                                 <i class="las la-minus"></i><span>List Purchases</span>
                             </a>
                         </li>
                         <li class="">
-                            <a href="backend/page-add-purchase.html">
+                            <a href="{{route("purchase.create")}}">
                                 <i class="las la-minus"></i><span>Add purchase</span>
                             </a>
                         </li>

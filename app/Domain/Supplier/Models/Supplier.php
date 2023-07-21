@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Domain\Purchase\Models;
+namespace App\Domain\Supplier\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Purchase extends Model
+class Supplier extends Model
 {
     use HasFactory;
-
-    
 }
